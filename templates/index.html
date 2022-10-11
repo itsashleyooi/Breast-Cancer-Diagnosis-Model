@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breast Cancer Diagnosis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+
+</head>
+
+<body style="background: white;">
+    <header>
+      <nav style="background-color: #333;">
+        <ul class="ul_index_bar">
+          <li style = "display: inline-block;">
+            <a href="https://www.breastcancer.org/" target="_blank">
+            <img class = "logo-image" src="{{url_for('static', filename = 'images/bc_logo.png')}}">
+            </a>
+          </li>
+          <li class="li_index_bar"><a href="{{ url_for('about_model') }}">About Model</a></li>
+          <li class="li_index_bar"><a href="{{ url_for('about_us') }}">About Us</a></li>
+          <li class="li_index_bar"><a style="background-color: #FF96A7;" href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="monash-row">
+      <a href="https://www.monash.edu.my/" target="_blank">
+        <img class = "logo-image-single" src="{{url_for('static', filename = 'images/monash_icon.svg.png')}}">
+      </a>
+      <h1 style="color:black; text-align: center;">Breast Cancer Diagnosis</h1>
+    </div>
+
+ <div class="upload" style="text-align: center">
+    <div class="lottie-player-container">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_wdXBRc.json" background="transparent"  speed="1"  style="height: 300px; text-align: center;" loop autoplay></lottie-player>
+    </div>
+    
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <div id="loading">
+      <!-- <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_p8bfn5to.json" background="transparent"  speed="1"  style="height: 100px; text-align: center;" loop autoplay></lottie-player> -->
+      <p>Loading, please wait for few seconds ....</p>
+    </div>
+
+    <div id="content">
+      <form action="" method="POST" enctype="multipart/form-data">
+      <h2>Upload a medical image</h2>
+      <p>Get some <a href="https://drive.google.com/drive/folders/1eKJY8hwfHZh4bxLdzjW3lDdjeI8uNT-b?usp=sharing" target="_blank">sample images</a> to try out this platform!</p>
+      <h5>Support images format (.png, .jpg, .jpeg)</h5>
+      <input style="font-size: 15px;" type="file" name="file" accept=".png, .jpg, .jpeg">
+      <input type="submit" name="submit" value="submit" style="color: black" onclick="loading();">
+      </form>
+    </div>
+ </div>
+
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Breast Cancer Diagnosis About Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <style>
+            h2 {text-align: center;}
+            h3 {text-align: center;}
+            p {text-align: center;}
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <nav style="background-color: #333;">
+              <ul class="ul_index_bar">
+                <li style = "display: inline-block;">
+                    <a href="https://www.breastcancer.org/" target="_blank">
+                    <img class = "logo-image" src="{{url_for('static', filename = 'images/bc_logo.png')}}">
+                    </a>
+                  </li>                <li class="li_index_bar"><a href="{{ url_for('about_model') }}">About Model</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('about_us') }}">About Us</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('home') }}">Home</a></li>
+              </ul>
+            </nav>
+      </header>
+
+    <div class="monash-row">
+        <a href="https://www.monash.edu.my/" target="_blank">
+            <img class = "logo-image-single" src="{{url_for('static', filename = 'images/monash_icon.svg.png')}}">
+          </a>        
+        <h1 style="color:black; text-align: center;">About the Project</h1>
+    </div>
+
+        <p>Breast Cancer Diagnosis Model using Mammography Images by Employing Deep Learning</p>
+        <br>
+        <div class="center-box">
+            <h2>Inspiration</h2>
+            <p>
+                As breast cancer is the second common cause of death resulting from cancer in women, breast cancer is a serious health threat to women, both physically and psychologically.
+                Mammography is an inexpensive method where one can diagnose breast cancer in its early stages.
+            </p>
+            <p>
+                Mammography images can show changes in the breast up to two years before a physician can feel them.
+                Computer-aided detection and diagnosis are considered to be one of the most promising approaches that may improve the efficiency of mammography. 
+            </p>
+            <br>
+            <h2>Aspiration</h2>
+            <p>
+                The aim of this project is to design a high accuracy breast cancer diagnosis model using deep learning approaches to <br>
+                classify the cancerous and non-cancerous cases of mammography images.
+            </p>
+        </div>
+        <br>
+        <h2>The Team</h2>
+        <p>
+            We are a group of 3 final year computer science students majoring in data science developing this predictive model <br>as part of our final year project at Monash University, Malaysia. <br>
+            <br> Our team hopes that this project will have a substantial impact towards the field of breast cancer detection. <br>
+            <br>    
+            <br>
+            <b>Team Members: <br></b></p>
+        <br>
+        <br>
+        <div class="row">
+            <div class="column-three">
+                <div class="about-card">
+                    <img src="https://drive.google.com/uc?id=13eC6xjcsDgGcaJAOBsHGgAHtd35ImoO0" alt="Ashleypic"><br>
+                    <div class = "container-for-about">
+                        <h2><b>Ashley Ooi Yan-Lin</b></h2>
+                        <p style="color: grey;"><b>Project Manager</b></p>
+                        <p>Email address: aooi0006@student.monash.edu</p><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-three">
+                <div class="about-card">
+                    <img src="https://drive.google.com/uc?id=1lfJo8zWRJqywrSSlvJl0RftIu3fGHxEh" alt="ETpic"><br>
+                    <div class = "container-for-about">
+                        <h2><b>Tan Eng Teck</b></h2>
+                        <p style="color: grey;"><b>Technical Lead</b></p>
+                        <p>Email address: etan0051@student.monash.edu</p><br>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="column-three">
+                <div class="about-card">
+                    <img src="https://drive.google.com/uc?id=1vhuTybTcIqiGJvzJRr2xtGcYrgQAhxWR" alt="syuupic"><br>
+                    <div class = "container-for-about">
+                        <h2><b>Tozu Mi Syuu</b></h2>
+                        <p style="color: grey;"><b>Quality Assurance Lead</b></p>
+                        <p>Email address: mtoz0002@student.monash.edu</p><br>
+                    </div>
+                </div>
+            </div>
+        </p>
+        </div>
+
+    </body>
+</html>

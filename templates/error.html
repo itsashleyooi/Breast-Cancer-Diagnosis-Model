@@ -1,0 +1,5 @@
+<p>Opps, seems like you face some error</p>
+{% if messages %}
+    <h3 style="color: red;">Error: {{messages}}</h3>
+{% endif %}
+<button type='button'><a href="{{url_for('home')}}">Go to Home</a></button>

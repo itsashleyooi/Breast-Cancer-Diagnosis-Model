@@ -1,0 +1,63 @@
+<html>
+      <head>
+            <title>Breast Cancer Diagnosis Results</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      </head>
+<body>
+      <header>
+            <nav style="background-color: #333;">
+              <ul class="ul_index_bar">
+                  <li style = "display: inline-block;">
+                        <a href="https://www.breastcancer.org/">
+                        <img class = "logo-image" src="{{url_for('static', filename = 'images/bc_logo.png')}}">
+                        </a>
+                  </li>                
+                <li class="li_index_bar"><a href="{{ url_for('about_model') }}">About Model</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('about_us') }}">About Us</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('home') }}">Home</a></li>
+              </ul>
+            </nav>
+      </header>
+      
+      <div class="monash-row">
+            <img class = "logo-image-single" src="{{url_for('static', filename = 'images/monash_icon.svg.png')}}">
+            <h1 style="color:black; text-align: center;">Breast Cancer Diagnosis</h1>
+      </div>
+      
+      <tr>
+            <div class="row">
+                  <div class="column">
+                        <p>Input Images</p>
+                        <img src="{{ user_image }}" alt="User Image" height="240px" width="300px">
+                  </div>
+
+                  <div class="column" style="margin-top: 50px;">
+                        <h3>Identified Class</h3>
+                        <ol style="list-style-type: none; text-align: justify; margin-left: 250px;">
+                              <li>1. Benign</li>
+                              <li>2. Malignant</li>
+                              <li>3. Normal</li>
+                        </ol>
+                  </div>
+            </div>
+
+      <div class ="row" style="text-align: center;">
+            <p> This is your prediction result.</p>
+            <div class="center-box">
+                  <h3> {{name}} </h3>
+            </div>
+            <br>
+            </tr> 
+            <div style="color:hotpink;">
+                  <h2>Diagnosis is not the end, </h2>
+                  <h2>But the beginning of practice.</h2>
+            </div>
+      </div>
+
+      <div style="text-align: center; margin: 10px;">
+      <button type = "button" > <a href="{{ url_for('home') }}">Predict Again</a></button>
+      </div>
+
+      <br>
+</body>
+</html>

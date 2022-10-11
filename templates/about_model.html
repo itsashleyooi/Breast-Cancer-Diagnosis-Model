@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Breast Cancer Diagnosis About Model</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <style>
+            h2 {text-align: center;}
+            h3 {text-align: center;}
+            h5 {text-align: center;}
+            p {text-align: center;}
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav style="background-color: #333;">
+              <ul class="ul_index_bar">
+                <li style = "display: inline-block;">
+                    <a href="https://www.breastcancer.org/" target="_blank">
+                    <img class = "logo-image" src="{{url_for('static', filename = 'images/bc_logo.png')}}">
+                    </a>
+                  </li>                
+                  <li class="li_index_bar"><a href="{{ url_for('about_model') }}">About Model</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('about_us') }}">About Us</a></li>
+                <li class="li_index_bar"><a href="{{ url_for('home') }}">Home</a></li>
+              </ul>
+            </nav>
+      </header>
+
+      <div class="monash-row">
+        <a href="https://www.monash.edu.my/" target="_blank">
+            <img class = "logo-image-single" src="{{url_for('static', filename = 'images/monash_icon.svg.png')}}">
+          </a>        
+          <!-- <h1 style="color:black; text-align: center;">About the Model</h1> -->
+        </div>
+
+        <div class="hero-image">   
+            <div class="hero-title">
+                <h1>About the Model</h1>
+
+            </div>
+        </div>
+
+        <!-- <h1 id="tittle">About The Model Page</h1> -->
+        <!-- <h2>About the Model</h2> -->
+        <div class="describe">
+            <p>The breast cancer diagnosis predictive model is based on the VGG-19 CNN architecture. <br>
+                The model classifies mammography images into 3 classes which are Benign, Malignant and Normal. <br>
+                The predictive results will be shown in the form of text after users have submitted a mammography image. <br>
+            </p>
+        </div>
+        <br>
+
+        
+        <div class="main">
+            <img src="https://drive.google.com/uc?id=1zjcdC7WFA-47QrOE8s5Y0uDI0qs-5bT3" alt="breastcancerpic" style="height: 300px; width: 300px">   
+            <div class="about-text">
+                <h2>Details</h2>
+                <h5>Dataset Used for training and testing the model:</h5>
+                <p><b>Mammographic Image Analysis Society (MIAS) database</b></p>
+                <br>
+                <p>Accuracy of the breast cancer diagnosis predictive model: <b>93%</b></p>
+                <p>Training and testing distribution of dataset: <b>80:20</b></p>
+                <p>Used Batch Size: <b>64</b></p>
+            </div>
+        </div>
+        <br>
+
+        <div class="longtext">
+            <h3>Below is an graphical representation of the VGG-19 CNN architecture used to develop the predictive model:</h3>
+            <p><img src="https://drive.google.com/uc?id=1Vq2xSMXPjchbfshZseshfzZx2LpB0aJO" alt="vgg19architecture" style="height: 300px; width: 600px"><br></p>
+            <div class="textbox">
+                <p>By using the VGG-19 pre-trained model, we added some few layers to increase the accuracy 
+                    as well as reduce the overfitting. This project utilises the VGG19 model, which is a 
+                    convolutional neural network that is trained on more than a million images from the 
+                    ImageNet database, as a base model. The VGG19 model was proposed by the Visual Geometry 
+                    Group of Oxford University in 2014, and obtained accurate classification performance on 
+                    the ImageNet dataset. On top of that, we added another 16 layers to further equip our model 
+                    with the ability to classify the abnormalities present in the mammography images. Our deep 
+                    learning model is outstandingly fine-tuned to produce the best accuracy possible (93%) while 
+                    also optimising computing resources.</p>
+            </div>
+        </div>
+        <br>
+        <h2> Performance Matrix</h2>
+        <!-- <p> Shown below is the performance matrix of the model: </p> -->
+        <div class="about-performance">
+            <div class="detail-text">
+                <div class="four-box">
+                    <h4> Accuracy: </h4>
+                    <h3><b>93%</b> </h3>
+                </div>
+
+                <div class="four-box">
+                    <h4> Recall: </h4>
+                    <h3><b>89.6%</b> </h3>
+                </div>
+
+                <div class="four-box">
+                    <h4> Precision: </h4>
+                    <h3><b>90.19%</b> </h3>
+                </div>
+
+                <div class="four-box">
+                    <h4> F1-score: </h4>
+                    <h3><b>89.82%</b> </h3>
+                </div>
+
+                <!-- <h2>Performance Matrix</h5>
+                
+                <h3> Recall: <b>0.896</b> </h5>
+                <h3> Precision: <b>0.9019</b></h3>
+                <h3> F1-score: <b>0.8982</b> </h3> -->
+            </div>
+        </div>
+        <!-- <p><img src="https://drive.google.com/uc?id=1-I8Tp-XYJHWt94W15jzcWQn0IANQtQIo" alt="C_matrix" style="height: 300px; width: 350px"><br></p> -->
+        <!-- <p><img src="https://drive.google.com/uc?id=1OEqYGTmuGRMHSWzIDRvSCcQHUmbPbcoD" alt="linechart" style="height: 300px; width: 350px"><br></p> -->
+        
+        <div class="info">
+            <h2>Additional Info:</h2>
+            <p>Recall score represents the model’s ability to correctly predict the positives out of the actual positives. <br></p>
+            <p>Precision score is intuitively the ability of the classifier not to label as positive a sample that is negative. <br></p>
+            <p>F1 score is the harmonic mean of precision and recall. Harmonic mean is appropriate for situations when the average rate is desired. <br></p>
+        </div>
+        <br>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    </body>
+</html>
