@@ -48,7 +48,7 @@ def get_model():
     model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(Dropout(0.2))
-    model.add(Dense(1024, kernel_initializer='he_uniform'))
+    model.add(Dense(512, kernel_initializer='he_uniform'))
     model.add(BatchNormalization())
     model.add(Activation('relu'))
     model.add(Dropout(0.2))
@@ -56,7 +56,7 @@ def get_model():
     return model
 
 model = get_model()
-model.load_weights('models/breast_cance_vgg3_weights-3.h5')
+model.load_weights('models/breast_cance_vgg3_weights-4.h5')
 model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 
 def get_img_data(image):
