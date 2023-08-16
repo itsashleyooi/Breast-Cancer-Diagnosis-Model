@@ -1,7 +1,7 @@
 from distutils.log import debug
 from email import message
-from json import dumps
-from logging import warning
+# from json import dumps
+# from logging import warning
 import os
 from pickle import TRUE
 from pyexpat.errors import messages
@@ -125,7 +125,7 @@ def home():
                 full_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 #flash('File successfully uploaded')
             try:
-                output, warning = predict(full_filename)
+                output, warning = predict(full_filename) #call function predict
                 if warning is not None:
                     return render_template("error.html", messages=warning)
             except:
